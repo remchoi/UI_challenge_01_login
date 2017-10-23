@@ -163,6 +163,7 @@
   left: 0;
 }
 .hero-login-tabs .form-control {
+  padding-left: 34px;
   font-size: 16px;
   letter-spacing: 0.6px;
   color: #fff;
