@@ -113,21 +113,61 @@
 .hero-login {
   padding-top: 100px;
   background: #262626;
+  background: #ff6c2d;
+  z-index: 10;
+  box-shadow: 0 -5px 20px rgba(0,0,0,0.5);
 }
 .hero-login-tabs .nav-tabs {
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid rgba(255,255,255,0.7);
 }
 .hero-login-tabs .nav-tabs > li > a {
+  padding-top: 0;
+  margin-bottom: -1px;
+  font-size: 18px;
+  letter-spacing: 1.6px;
+  color: #fff !important;
   border-radius: 0 !important;
   border: none;
   border-bottom: 2px solid transparent;
+  background: none !important;
+  opacity: 0.66;
 }
 .hero-login-tabs .nav-tabs > li.active > a,
 .hero-login-tabs .nav-tabs > li.active > a:hover,
 .hero-login-tabs .nav-tabs > li.active > a:focus {
   border: none;
-  border-bottom: 2px solid #e6e6e6;
+  border-bottom: 2px solid #fff;
+  opacity: 1;
+}
+.hero-login-tabs .nav-tabs > li.active > a {
+  font-weight: bold;
 }
 .hero-login-tabs .tab-pane {
   padding: 30px 50px;
+  padding-top: 45px;
+}
+.hero-login-tabs .form-group {
+  position: relative;
+  border-bottom: 2px solid rgba(255,255,255,0.5);
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+.hero-login-tabs label {
+  color: #fff;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.6px;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+.hero-login-tabs .form-control {
+  font-size: 16px;
+  letter-spacing: 0.6px;
+  color: #fff;
+  background: none;
+  border-radius: none;
+  border: none;
+  box-shadow: none;
 }
