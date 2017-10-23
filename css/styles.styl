@@ -1,15 +1,67 @@
+borderColor = darken(white, 10%)
+vTopSpace = 100px
+hRgihtSpace = 30px
+vBottomSpace = 30px
+
 .hero
 	height 100vh
 	
-.hero-bg,
+.hero-content,
 .hero-login
 	padding 0
 	position relative
 	height 100%
 	
-.hero-bg
-	background lighten(black, 15%)
-	// display none
+.hero-content
+	padding-top vTopSpace
+	position relative
+	z-index 10
+
+.hero-caption
+	width 50%
+	padding-left hRgihtSpace
+
+.hero-footer
+	position absolute
+	bottom 0
+	left 0
+	padding vBottomSpace hRgihtSpace
+	width 100%
+	
+.hero-footer-nav
+	position relative
+	margin-bottom vBottomSpace
+
+.hero-footer-navbar,
+.hero-footer-social-list
+	list-style none
+	margin 0
+	padding 0
+	> li
+		display inline-block
+		
+.hero-footer-social-list
+	position absolute
+	top 0
+	right 0
 
 .hero-login
 	// background red
+	padding-top vTopSpace
+	background lighten(black, 15%)
+	
+.hero-login-tabs
+	.nav-tabs
+		border-bottom 1px solid borderColor
+		> li
+			> a
+				border-radius 0 !important
+				border none
+				border-bottom 2px solid transparent
+			&.active > a
+			&.active > a:hover,
+			&.active > a:focus
+				border none
+				border-bottom 2px solid borderColor
+	.tab-pane
+		padding 30px

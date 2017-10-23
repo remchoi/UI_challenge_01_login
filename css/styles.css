@@ -1,12 +1,65 @@
 .hero {
   height: 100vh;
 }
-.hero-bg,
+.hero-content,
 .hero-login {
   padding: 0;
   position: relative;
   height: 100%;
 }
-.hero-bg {
+.hero-content {
+  padding-top: 100px;
+  position: relative;
+  z-index: 10;
+}
+.hero-caption {
+  width: 50%;
+  padding-left: 30px;
+}
+.hero-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px 30px;
+  width: 100%;
+}
+.hero-footer-nav {
+  position: relative;
+  margin-bottom: 30px;
+}
+.hero-footer-navbar,
+.hero-footer-social-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.hero-footer-navbar > li,
+.hero-footer-social-list > li {
+  display: inline-block;
+}
+.hero-footer-social-list {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.hero-login {
+  padding-top: 100px;
   background: #262626;
+}
+.hero-login-tabs .nav-tabs {
+  border-bottom: 1px solid #e6e6e6;
+}
+.hero-login-tabs .nav-tabs > li > a {
+  border-radius: 0 !important;
+  border: none;
+  border-bottom: 2px solid transparent;
+}
+.hero-login-tabs .nav-tabs > li.active > a,
+.hero-login-tabs .nav-tabs > li.active > a:hover,
+.hero-login-tabs .nav-tabs > li.active > a:focus {
+  border: none;
+  border-bottom: 2px solid #e6e6e6;
+}
+.hero-login-tabs .tab-pane {
+  padding: 30px;
 }
