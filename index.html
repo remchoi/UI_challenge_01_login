@@ -19,14 +19,98 @@
 <body>
 	<div class="hero">
 		<div class="hero-bg col-md-9">
-			
+			<div class="hero-caption">
+				<h1 class="hero-caption-title">Welcome, My Friend</h1>
+				<p class="hero-caption-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="hero-footer">
+				<div class="hero-footer-nav">
+					<ul class="hero-footer-navbar">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Help Center</a></li>	
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Terms</a></li>	
+						<li><a href="#">Privacy Policy</a></li>	
+						<li><a href="#">Cookies</a></li>	
+						<li><a href="#">Advertise</a></li>	
+						<li><a href="#">Marketing</a></li>	
+						<li><a href="#">Developers</a></li>	
+					</ul>
+					<ul class="hero-social-list">
+						<li><a href="#" class="fa fa-facebook"></a></li>
+						<li><a href="#" class="fa fa-twitter"></a></li>	
+						<li><a href="#" class="fa fa-linkedin"></a></li>	
+						<li><a href="#" class="fa fa-youtube"></a></li>	
+						<li><a href="#" class="fa fa-dribbble"></a></li>	
+					</ul>
+				</div>
+				<div class="hero-footer-copyright">
+					<p>Made by <a href="https://www.facebook.com/remtsoydesign/">remtsoy</a>. Feel free to use this code and design wherever you want. Want more cool and free stuff? Subscirbe to my <a href="https://www.facebook.com/remtsoydesign/" target="_blank">facebook page</a>.</p>
+				</div>
+			</div>
 		</div>
 		<div class="hero-login col-md-3">
-			
+			<!-- Actions tabs -->
+			<div class="hero-login-tabs">
+
+				<!-- Tab navigation -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active">
+						<a href="#loginTab" aria-controls="loginTab" role="tab" data-toggle="tab">Login</a>
+					</li>
+					<li role="presentation">
+						<a href="#registerTab" aria-controls="registerTab" role="tab" data-toggle="tab">Register</a>
+					</li>
+				</ul>
+				<!-- /Tab navigation -->
+
+				<!-- Tab content -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="loginTab">
+						<form>
+							<div class="form-group">
+								<label for="loginInputEmail">Email address</label>
+								<input type="text" class="form-control" id="loginInputEmail">
+							</div>
+							<div class="form-group">
+								<label for="loginInputPwd">Password</label>
+								<input type="password" class="form-control" id="loginInputPwd">
+							</div>
+							<button type="submit" class="btn btn-block btn-default">Log in</button>
+						</form>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="registerTab">
+						<form>
+							<div class="form-group">
+								<label for="registerInputEmail">Email address</label>
+								<input type="text" class="form-control" id="registerInputEmail">
+							</div>
+							<div class="form-group">
+								<label for="registerInputPwd">Password</label>
+								<input type="password" class="form-control" id="registerInputPwd">
+							</div>
+							<div class="form-group">
+								<label for="registerInputPwdComfirm">Comfirm Password</label>
+								<input type="password" class="form-control" id="registerInputPwdComfirm">
+							</div>
+							<button type="submit" class="btn btn-block btn-default">Register</button>
+						</form>
+					</div>
+				</div>
+				<!-- /Tab content -->
+
+			</div>
+			<!-- /Actions tabs -->
+
 		</div>
 	</div>
   <script src="js/jquery.js"></script>
-  <script src="js/bootstra.js"></script>
+  <script src="js/bootstrap.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>
