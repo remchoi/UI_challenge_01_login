@@ -27,3 +27,24 @@ $('.form-group').each(function(){
         }
     });
 });
+
+
+
+
+
+
+$(document).ready(function(){
+    
+    $('#youtube-video').YTPlayer({
+        fitToBackground: true,
+        videoId: $('#youtube-video').data('video-id'),
+        events: {
+            'onReady' : onPlayerReady
+        }
+    });
+
+    function onPlayerReady() {
+        var player = $('#youtube-video').data('ytPlayer').player;
+        player.mute();
+    };
+});

@@ -18,7 +18,8 @@
 .hero-bg-img,
 .hero-bg-mask,
 .hero-bg-gradient-mask,
-.hero-bg-front-img {
+.hero-bg-front-img,
+.hero-bg-video {
   position: absolute;
   top: 0;
   left: 0;
@@ -35,17 +36,29 @@
 .hero-bg-mask {
   z-index: 2;
   background: #000;
-  opacity: 0.5;
+  opacity: 0.55;
 }
 .hero-bg-gradient-mask {
   z-index: 4;
   background: linear-gradient(to right, #f9d423, #ff4e50);
-  opacity: 0.65;
+  opacity: 0.55;
 }
 .hero-bg-front-img {
   z-index: 3;
   background-blend-mode: color-dodge;
-  opacity: 0.3;
+  opacity: 0.1;
+}
+.hero-bg-video {
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  backface-visibility: hidden;
+  perspective: 1000;
 }
 .hero-content {
   color: #fff;
@@ -66,11 +79,12 @@
   margin-bottom: 30px;
 }
 .hero-caption-text {
-  width: 80%;
+  width: 90%;
   margin-bottom: 0;
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: 0.33px;
   opacity: 0.8;
+  line-height: 1.6em;
 }
 .hero-footer {
   z-index: 10;
@@ -137,19 +151,20 @@
   margin-bottom: 0;
 }
 .hero-footer-copyright > p > a {
-  color: #ff4e50;
+  color: #00b1af;
   font-weight: bold;
 }
 .hero-footer-copyright > p > a:hover {
-  color: #ff4e50;
+  color: #00b1af;
 }
 .hero-login {
   padding-top: 100px;
   background: #262626;
   background: #fff;
   background: #ff4e50;
-  z-index: 10;
-  box-shadow: 0 -5px 20px rgba(0,0,0,0.5);
+  z-index: 999;
+  backface-visibility: hidden;
+  box-shadow: 0 -7px 40px rgba(133,0,2,0.35);
 }
 .hero-btn {
   padding: 30px 0;
@@ -219,7 +234,7 @@
   transition: 0.3s;
 }
 .hero-login-tabs .form-group.active {
-  border-color: #ff4e50;
+  border-color: #fff;
 }
 .hero-login-tabs .form-group.active label {
   opacity: 0.66;

@@ -51,7 +51,8 @@ inputHeight = 45px
 .hero-bg-img,
 .hero-bg-mask,
 .hero-bg-gradient-mask,
-.hero-bg-front-img
+.hero-bg-front-img,
+.hero-bg-video
 	position absolute
 	top 0
 	left 0
@@ -68,17 +69,29 @@ inputHeight = 45px
 .hero-bg-mask
 	z-index 2
 	background black
-	opacity .5
+	opacity .55
 	
 .hero-bg-gradient-mask
 	z-index 4
 	background linear-gradient(to right, _grad_start, _base)
-	opacity .65
+	opacity .55
 
 .hero-bg-front-img
 	z-index 3
 	background-blend-mode color-dodge
-	opacity .3
+	opacity .1
+	
+.hero-bg-video
+	min-height 100%
+	min-width 100%
+	width auto
+	height auto
+	z-index 1
+	top 50%
+	left 50%
+	transform translate3d(-50%, -50%, 0)
+	backface-visibility hidden
+	perspective 1000
 
 .hero-content
 	// z-index 10
@@ -101,11 +114,12 @@ inputHeight = 45px
 	margin-bottom vBottomSpace
 
 .hero-caption-text
-	width 80%
+	width 90%
 	margin-bottom 0
-	font-size 20px
+	font-size 22px
 	letter-spacing 0.33px
 	opacity .8
+	line-height 1.6em
 
 .hero-footer
 	z-index 10
@@ -167,10 +181,10 @@ inputHeight = 45px
 .hero-footer-copyright > p
 	margin-bottom 0
 	> a
-		color _base
+		color _baseI
 		font-weight bold
 		&:hover
-			color _base
+			color _baseI
 
 .hero-login
 	// background red
@@ -181,8 +195,10 @@ inputHeight = 45px
 	// background #ffcdcd
 	// background lighten(_base, 94.5%)
 	background _base
-	z-index 10
-	box-shadow 0 -5px 20px fade-out(black, 50%)
+	z-index 999
+	backface-visibility hidden
+	// box-shadow 0 -7px 40px fade-out(black, 65%)
+	box-shadow 0 -7px 40px fade-out(darken(_base, 60%), 65%)
 	
 
 .hero-btn
@@ -260,7 +276,9 @@ inputHeight = 45px
 			// border-color lighten(_baseI, 30%)
 			// bord
 			// tabBorderColor
-			border-color _base
+			// border-color _base
+			// border-color _baseI
+			border-color tabBorderColor
 			// .fa
 				// color lighten(_baseI, 30%)
 			label
