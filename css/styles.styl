@@ -1,9 +1,29 @@
 // borderColor = darken(white, 10%)
 _base = #ff6c2d
 _base = #0093d2
+_base = #ff6b6b
+_base = #6e48aa
+_grad_start = #556270
+_grad_start = #9d50bb
+
+
+_base = #ff4e50
+_grad_start = #f9d423
+
+
+// _base = #3a7bd5
+// _grad_start = #00d2ff
+
+
+
+
 _baseI = invert(_base)
 
+// tabBorderColor = white
+tabBorderColor = darken(white, 40%)
 tabBorderColor = white
+formTextColor = darken(white, 60%)
+formTextColor = white
 vTopSpace = 100px
 hRgihtSpace = 50px
 vBottomSpace = 30px
@@ -29,14 +49,17 @@ inputHeight = 45px
 
 
 .hero-bg-img,
-.hero-bg-mask
+.hero-bg-mask,
+.hero-bg-gradient-mask,
+.hero-bg-front-img
 	position absolute
 	top 0
 	left 0
 	width 100%
 	height 100%
 	
-.hero-bg-img
+.hero-bg-img,
+.hero-bg-front-img
 	background-size cover
 	background-position center center
 	z-index 1
@@ -46,6 +69,16 @@ inputHeight = 45px
 	z-index 2
 	background black
 	opacity .5
+	
+.hero-bg-gradient-mask
+	z-index 4
+	background linear-gradient(to right, _grad_start, _base)
+	opacity .65
+
+.hero-bg-front-img
+	z-index 3
+	background-blend-mode color-dodge
+	opacity .3
 
 .hero-content
 	// z-index 10
@@ -57,7 +90,7 @@ inputHeight = 45px
 	left 0
 	padding-top vTopSpace
 	position absolute
-	width 50%
+	width 60%
 	padding-left hRgihtSpace
 	
 
@@ -68,6 +101,7 @@ inputHeight = 45px
 	margin-bottom vBottomSpace
 
 .hero-caption-text
+	width 80%
 	margin-bottom 0
 	font-size 20px
 	letter-spacing 0.33px
@@ -108,8 +142,27 @@ inputHeight = 45px
 		
 .hero-footer-social-list
 	position absolute
-	top 0
+	top -2px
 	right 0
+	> li
+		margin-left (hRgihtSpace/4)
+		> a
+			display block
+			height (hRgihtSpace/2)
+			width (hRgihtSpace/2)
+			line-height (hRgihtSpace/2)
+			background white 
+			color darken(white, 40%)
+			border-radius 50%
+			text-align center
+			transition .3s
+			outline none !important
+			&:hover
+				text-decoration none
+				// color white
+				color _base
+				// background _base
+		
 	
 .hero-footer-copyright > p
 	margin-bottom 0
@@ -123,6 +176,10 @@ inputHeight = 45px
 	// background red
 	padding-top vTopSpace
 	background lighten(black, 15%)
+	// background _base
+	background white
+	// background #ffcdcd
+	// background lighten(_base, 94.5%)
 	background _base
 	z-index 10
 	box-shadow 0 -5px 20px fade-out(black, 50%)
@@ -142,6 +199,7 @@ inputHeight = 45px
 	color white !important
 	background _baseI !important
 	transition .3s
+	margin-top vBottomSpace*2
 	// box-shadow 0 2px 4px fade-out(darken(_baseI, 50), 79%)
 	box-shadow 0 7px 25px fade-out(darken(_baseI, 50), 80%)\,0 1px 2px fade-out(darken(_baseI, 50), 70%)
 	&:hover
@@ -159,7 +217,7 @@ inputHeight = 45px
 				margin-bottom -1px
 				font-size 18px
 				letter-spacing 1.6px
-				color white !important
+				color formTextColor !important
 				border-radius 0 !important
 				border none
 				border-bottom 2px solid transparent
@@ -180,9 +238,10 @@ inputHeight = 45px
 	.form-group
 		position relative
 		border-bottom 2px solid fade-out(tabBorderColor, 50%)
-		margin-bottom vBottomSpace
+		// margin-bottom vBottomSpace
 		padding-top (vBottomSpace - 10)
 		transition .3s
+		margin-bottom (vBottomSpace/2)
 		.fa
 			position absolute
 			bottom 0
@@ -192,13 +251,16 @@ inputHeight = 45px
 			height inputHeight
 			line-height inputHeight
 			display block
-			color white
+			color formTextColor
 			font-size 18px
 			z-index 1
 			transition .3s
 			// text-align center
 		&.active
-			border-color lighten(_baseI, 30%)
+			// border-color lighten(_baseI, 30%)
+			// bord
+			// tabBorderColor
+			border-color _base
 			// .fa
 				// color lighten(_baseI, 30%)
 			label
@@ -207,16 +269,16 @@ inputHeight = 45px
 				transform translate3d(0, 0, 0)
 	
 	label
-		color white
+		color formTextColor
 		font-weight normal
 		font-size 16px
 		letter-spacing 0.6px
 		position absolute
 		margin 0
-		top 0
+		top 8px
 		left 0
 		z-index 1
-		transform translate3d((inputHeight - 15),  (inputHeight - 15), 0)
+		transform translate3d((inputHeight - 15),  (inputHeight - 22), 0)
 		transition .3s
 		
 	.form-control
@@ -228,7 +290,7 @@ inputHeight = 45px
 		padding-left (inputHeight - 15)
 		font-size 16px
 		letter-spacing 0.6px
-		color white
+		color formTextColor
 		background none
 		border-radius none
 		border none
